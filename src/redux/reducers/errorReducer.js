@@ -1,12 +1,14 @@
-import { SET_ERROR } from '../types';
+import { SET_ERROR } from "../types";
 
-const initialState = '';
+const initialState = "";
 
-export default(state = initialState, action) => {
-    switch(action.type) {
-        case SET_ERROR:
-            return action.payload
-        default:
-            return state;
-    }
-}
+const errorReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_ERROR:
+      return action.payload;
+    default:
+      return state;
+  }
+};
+
+export default errorReducer;
